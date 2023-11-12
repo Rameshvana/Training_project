@@ -1,0 +1,53 @@
+{
+  "Registations": [
+    {
+      "Name": "Ramesh Vanaparthi",
+      "Email": "ramesh@gmail.com",
+      "phoneNumber": "999999999",
+      "password": "ramesh123",
+      "dateofbirth": "2023-10-27",
+      "id": 1
+    },
+    {
+      "Name": "Ramesh Vanaparthi",
+      "Email": "ramesh@gmail.com",
+      "phoneNumber": "999999999",
+      "password": "ramesh123",
+      "dateofbirth": "2023-10-27",
+      "id": 2
+    },
+    {
+      "Name": "Ramesh Vanaparthi",
+      "Email": "ramesh@gmail.com",
+      "phoneNumber": "999999999",
+      "password": "ramesh123",
+      "dateofbirth": "2023-10-27",
+      "id": 3
+    },
+    {
+      "Name": "Ramesh Vanaparthi",
+      "Email": "ramesh@gmail.com",
+      "phoneNumber": "999999999",
+      "password": "ramesh123",
+      "dateofbirth": "2023-10-27",
+      "id": 4
+    },
+    {
+      "Name": "Ramesh Vanaparthi",
+      "Email": "ramesh@gmail.com",
+      "phoneNumber": "999999999",
+      "password": "ramesh123",
+      "dateofbirth": "2023-10-27",
+      "id": 5
+    },
+    {
+      "Name": "Ramesh Vanaparthi",
+      "Email": "ramesh@gmail.com",
+      "phoneNumber": "999999999",
+      "password": "ramesh123",
+      "dateofbirth": "2023-10-27",
+      "id": 6
+    }
+  ],
+  "Property-type": []
+}

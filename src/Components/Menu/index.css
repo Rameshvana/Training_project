@@ -1,0 +1,96 @@
+.menu{
+ list-style-type: none;
+ background-color: blue;
+ color:white;
+ padding: 10px;
+ position: relative;
+ font-weight: 700;
+ cursor: pointer;
+
+ 
+
+}
+
+.menu_list {
+display: inline;                
+margin:40px;
+color:white;
+text-decoration: none;
+font-family: 'Roboto';
+}
+
+
+
+.menu_list:hover {
+color:rgb(76, 76, 188);
+}
+
+
+
+.menu_list:hover > .electronics_sub_menu {
+ display:block;
+}
+
+.menu_list:hover > .mobiles_sub_menu {
+  display:block;
+}
+
+.menu_list:hover > .Grosery_sub_menu {
+   display: block;
+}
+
+
+
+.mobiles_sub_menu {
+ list-style-type: none;
+ position: absolute;
+ background-color: coral;
+ color:white;
+ margin-top: 5px;
+ margin-left:505px;
+ padding: 10px;
+ line-height: 30px;
+ border:solid;
+ border-radius: 7px;
+ width:100px;
+ display: none;
+
+}
+
+.electronics_sub_menu {
+ list-style-type: none;
+ position: absolute;
+ background-color: coral;
+ color:white;
+ margin-top: 5px;
+ margin-left:670px;
+ padding: 10px;
+ line-height: 30px;
+ border:solid;
+ border-radius: 7px;
+ width:100px;
+ display: none;
+}
+
+
+.Grosery_sub_menu {
+ list-style-type: none;
+ position: absolute;
+ background-color: coral;
+ color:white;
+ margin-top: 5px;
+ margin-left:350px;
+ padding: 10px;
+ line-height: 30px;
+ border:solid;
+ border-radius: 7px;
+ width:100px;
+ display: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  margin: 10px;
+  color: white;
+  font-family: 'Roboto';
+}

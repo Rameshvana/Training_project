@@ -1,0 +1,52 @@
+
+.my-form {
+  border:solid transparent 2px;
+  width:620px;
+  border-radius: 10px;
+  background-color: lightgrey;
+  
+}
+
+.container {
+ display:flex;
+ flex-direction:column;
+ align-items: center;
+ margin-top: 30px;
+}
+
+.registationform-heading {
+  text-align: center;
+  font-size: 40px;
+  color:red;
+  padding:19px;
+  border-radius: 7px;
+  border:black;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.userinput-card {
+ margin: 19px 15px 10px 20px;
+}
+
+.regi-label{
+  margin:0px 0px 8px 9px;
+  color:black;
+  font-size:20px;
+  font-family:Roboto;
+  font-weight: 500;
+}
+
+.regi-input {
+  padding:9px;
+  border:solid 1px lightblue;
+  font-size:20px;
+}
+
+
+
+.btns-card {
+  text-align: center;
+  padding: 10px;
+}
