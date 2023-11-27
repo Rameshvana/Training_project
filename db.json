@@ -1,53 +1,42 @@
 {
   "Registations": [
     {
-      "Name": "Ramesh Vanaparthi",
-      "Email": "ramesh@gmail.com",
-      "phoneNumber": "999999999",
-      "password": "ramesh123",
-      "dateofbirth": "2023-10-27",
-      "id": 1
-    },
-    {
-      "Name": "Ramesh Vanaparthi",
-      "Email": "ramesh@gmail.com",
-      "phoneNumber": "999999999",
-      "password": "ramesh123",
-      "dateofbirth": "2023-10-27",
-      "id": 2
-    },
-    {
-      "Name": "Ramesh Vanaparthi",
-      "Email": "ramesh@gmail.com",
-      "phoneNumber": "999999999",
-      "password": "ramesh123",
-      "dateofbirth": "2023-10-27",
-      "id": 3
-    },
-    {
-      "Name": "Ramesh Vanaparthi",
-      "Email": "ramesh@gmail.com",
-      "phoneNumber": "999999999",
-      "password": "ramesh123",
-      "dateofbirth": "2023-10-27",
-      "id": 4
-    },
-    {
-      "Name": "Ramesh Vanaparthi",
-      "Email": "ramesh@gmail.com",
-      "phoneNumber": "999999999",
-      "password": "ramesh123",
-      "dateofbirth": "2023-10-27",
-      "id": 5
-    },
-    {
-      "Name": "Ramesh Vanaparthi",
-      "Email": "ramesh@gmail.com",
-      "phoneNumber": "999999999",
-      "password": "ramesh123",
-      "dateofbirth": "2023-10-27",
-      "id": 6
+      "id": 1,
+      "Name": "Anand",
+      "Email": "anand@gmail.com",
+      "phoneNumber": "675786847537",
+      "password": "anand123",
+      "dateofbirth": "2023-11-09",
+      "city": "Andrapradesh"
     }
   ],
-  "Property-type": []
+  "Property-type": [
+    {
+      "id": 1,
+      "propertyName": "Mobile",
+      "propertyDescription": "Mobile is a eletronic device.",
+      "propertyFacility": "No"
+    },
+    {
+      "id": 2,
+      "propertyName": "Apartment",
+      "propertyDescription": "Like home purpose",
+      "propertyFacility": "yes"
+    },
+    {
+      "id": 3,
+      "propertyName": "Laptop",
+      "propertyDescription": "Laptop is eletronic device",
+      "propertyFacility": "Yes"
+    }
+  ],
+  "Add-property": [
+    {
+      "id": 1,
+      "propertyName": "Samsong",
+      "propertyType": "Mobile",
+      "squrefeet": "20",
+      "constuction": "2023-11-18"
+    }
+  ]
 }

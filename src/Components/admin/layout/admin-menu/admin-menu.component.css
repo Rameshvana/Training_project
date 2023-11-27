@@ -1,11 +1,26 @@
 .admin-menu {
-          background-color: black;
-          height: 93vh;
-          color:white;
+   background-color: black;
+  height: 93vh;
+ color:white;
+ padding: 20PX;
 }
 
 .unorder-list {
   color:white;
+  list-style-type: none;
+}
 
-  
+.property-link {
+  text-decoration: none;
+  color: yellow;
+ font-size:17px;
+ font-style: italic;
+ padding-top:10px;
+
+}
+
+.typeone {
+  font-size:18px;
+  font-weight: 550;
+  color:white;
 }

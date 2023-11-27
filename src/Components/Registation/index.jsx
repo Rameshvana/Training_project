@@ -1,55 +1,69 @@
 import {useForm} from 'react-hook-form'
+import {useNavigate} from 'react-router-dom'
 import {  savetheData } from '../../Services/user.service';
 import './index.css'
 
 function Registation (){
 
+   const navigate = useNavigate();
+
  // Save User Enter Data in db and take user data from input
-function SaveRegistationData(event){
-  event.preventDefault();
-  let userName = document.getElementById('name').value
-  let Email = document.getElementById('email').value
-  let phoneNumber = document.getElementById('mobile').value
-  let dateofbirth = document.getElementById('dateofbirth').value
-  let password = document.getElementById('password').value
-  let city = document.getElementById('city').value
+   function SaveRegistationData(event) {
 
-  let data = {
-    Name: userName,
-    Email,
-    phoneNumber,
-    password,
-    dateofbirth,
-    city
-  }
-  savetheData(data)
-}
+      let userName = document.getElementById('name').value
+      let Email = document.getElementById('email').value
+      let phoneNumber = document.getElementById('mobile').value
+      let dateofbirth = document.getElementById('dateofbirth').value
+      let password = document.getElementById('password').value
+      let city = document.getElementById('city').value
 
-function clearData(){
-   let userName = document.getElementById('name').value = ''
-   let Email = document.getElementById('email').value = ''
-   let phoneNumber = document.getElementById('mobile').value = ''
-   let dateofbirth = document.getElementById('dateofbirth').value = ''
-   let password = document.getElementById('password').value = ''
-   let city = document.getElementById('city').value = '' 
-}
+      let data = {
+         id:0,
+         Name: userName,
+         Email,
+         phoneNumber,
+         password,
+         dateofbirth,
+         city
+      }
+
+      savetheData(data)
+      .then((res) => {
+         alert('Data Saved Succsefully..')
+         clearData();
+      })
+      .catch(()=>{
+         alert('Data not Saved')
+      })
+   }
+
+   function navigateLog(){
+      alert('AS')
+      navigate('/Login')
+   } 
+
+
+   function clearData(){
+      let userName = document.getElementById('name').value = ''
+      let Email = document.getElementById('email').value = ''
+      let phoneNumber = document.getElementById('mobile').value = ''
+      let dateofbirth = document.getElementById('dateofbirth').value = ''
+      let password = document.getElementById('password').value = ''
+      let city = document.getElementById('city').value = '' 
+   }
 
 // Validations used restrict the user in a form
+   const {
+      register,
+      handleSubmit,
+      formState : {errors},
+   } = useForm();
 
-const {
-   register,
-   handleSubmit,
-   formState : {errors},
-} = useForm();
-
-
-
-
-
+   
     return(
      <div className='container'>
        
-       <form className="my-form" onSubmit={handleSubmit(() => SaveRegistationData())}>
+       <form className="my-form" onSubmit={handleSubmit(SaveRegistationData)}>
          <h1 className='registationform-heading'>Registation Form</h1>
          
           
@@ -94,7 +108,7 @@ const {
             </div>
             <div className='btns-card'>
                <button type='submit' className='btn btn-danger'>Submit</button> &nbsp; &nbsp; &nbsp; &nbsp;
-               <button type='button' className='btn btn-success '>Login</button>
+               <button type='button' className='btn btn-success' onClick={navigateLog}>Login</button>
             </div>
       
        </form>

@@ -2,6 +2,8 @@ import {useRef,useState,useEffect} from 'react'
 import './property-type.component.css'
 import { deletePropertyTypeData, getPropertyTypeData, savePropertyType, updatePropertyTypeData } from '../../../../Services/property.service';
 import SharedComponent from '../../../Shared/shared.component';
+import { AdminMenu } from '../../layout/admin-menu/admin-menu.component';
+import { AuthRoute } from '../../../../Services/AuthRoute';
 
 export function PropertyType(){
 
@@ -25,6 +27,8 @@ export function PropertyType(){
           propertyDescription: propertyDisRef.current.value,
           propertyFacility: propertyFacilitiesRef.current.value
           }
+
+          
 
           if (propertyId == 0){
                savePropertyType(data)
@@ -110,29 +114,38 @@ export function PropertyType(){
           setSaveBtntext('Save')
   }
 
-  return(
-  <div>
-     <div className="form-group">
-          <label className='propty-label'>Property Name:</label>
-          <input type='text' className="form-control input" ref={propertyNameRef}/>
+  return (
+     <AuthRoute>
+     <div className='row'>
+          <div className='col-3'>
+               <AdminMenu/>
+          </div>
+          <div className='col-8'>
+          <h2>Type Property</h2>
+          
+          <div className="form-group">
+               <label className='propty-label'>Property Name:</label>
+               <input type='text' className="form-control property-input" ref={propertyNameRef}/>
+          </div>
+          <div className="form-group">
+          <label className='propty-label'>Property Description:</label>
+          <input type='text' className="form-control property-input" ref={propertyDisRef}/>
+          </div>
+          <div className="form-group">
+          <label className='propty-label'>Property Facilities:</label>
+          <input type='text' className="form-control property-input" ref={propertyFacilitiesRef}/>
+          </div>
+          <div className="mt-5">
+               <button type='button' className='btn btn-primary' onClick={savePropertyTypeData}>{saveBtntext}</button> &nbsp; &nbsp;
+               <button type="button" className="btn btn-secondary" onClick={ClearData}>Cancel</button>
+          </div>
+          {showMsg ?  <p className='Msg-para'>PropertyType data saved Succefully...</p> : <p></p>}
+          <div className='mt-5'>
+               {<SharedComponent key='A' title={"Property Type"}  headers = {headers} body={propertyGridData}
+               UpdatePropertyGrid={UpdatePropertyGrid} deleteItemGrid={deleteItemGrid} />}
+          </div>
+          </div>
      </div>
-     <div className="form-group">
-       <label className='propty-label'>Property Description:</label>
-       <input type='text' className="form-control input" ref={propertyDisRef}/>
-     </div>
-     <div className="form-group">
-       <label className='propty-label'>Property Facilities:</label>
-       <input type='text' className="form-control input" ref={propertyFacilitiesRef}/>
-     </div>
-     <div className="mt-5">
-          <button type='button' className='btn btn-primary' onClick={savePropertyTypeData}>{saveBtntext}</button> &nbsp; &nbsp;
-          <button type="button" className="btn btn-secondary" onClick={ClearData}>Cancel</button>
-     </div>
-     {showMsg ?  <p className='Msg-para'>PropertyType data saved Succefully...</p> : <p></p>}
-     <div className='mt-5'>
-          {<SharedComponent key='A' title={"Property Type"}  headers = {headers} body={propertyGridData}
-           UpdatePropertyGrid={UpdatePropertyGrid} deleteItemGrid={deleteItemGrid} />}
-     </div>
-  </div>
+     </AuthRoute>
   )
 }

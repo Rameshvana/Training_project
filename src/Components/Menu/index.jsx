@@ -5,7 +5,7 @@ function Menu (){
   return (
   <div>
      <ol className='menu'>
-        <li className='menu_list'>Home</li>
+        <li className='menu_list'><Link to='/' className='menu-link'>Home</Link></li>
         <li className='menu_list'>AboutUs</li>
         <li className='menu_list'>Groesery
             <ul className='Grosery_sub_menu'>
@@ -34,17 +34,17 @@ function Menu (){
               <li >Fan</li>
             </ul>
           </li>
-        <li className='menu_list nav-link'>
-          <Link to='/Registation'>Registation form</Link>
+        <li className='menu_list'>
+          <Link to='/Registation' className='menu-link'>Registation form</Link>
         </li>
         <li className='menu_list'>
-          <Link to='/Table'>Table form</Link>
+          <Link to='/Table' className='menu-link'>Table form</Link>
         </li>
         <li className='menu_list'>
-          <Link to='/Login'>Login form</Link>
+          <Link to='/Login' className='menu-link'>Login form</Link>
         </li>
         <li className='menu_list'>
-          <Link to='/Admin'>Admin Menu</Link>
+          <Link to='/Admin' className='menu-link'>Admin Menu</Link>
         </li> 
      </ol>
   </div>

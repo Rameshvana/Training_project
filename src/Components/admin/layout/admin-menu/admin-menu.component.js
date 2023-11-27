@@ -1,23 +1,25 @@
+  import {Link} from 'react-router-dom'
   import './admin-menu.component.css';
   
   export function AdminMenu(){
       return(
+        
           <div className="admin-menu">
-             <h4>Admin Menu</h4>
+             <h2 className='mb-3'>Admin Menu</h2>
              <div>
-                <h6 className='text-light'>Propertyies</h6>
+                <h6 className='typeone'>Propertyies</h6>
                 <ul className='unorder-list'>
-                    <li>Property Type</li>
-                    <li>Add Property</li>
-                    <li>View Property</li>
+                    <li><Link to='/property-type' className='property-link'>Property Type</Link></li>
+                    <li><Link to='/property-add' className='property-link'>Add Property</Link></li>
+                    <li><Link to='/property-view' className='property-link'>View Property</Link></li>
                 </ul>
              </div>
              <div>
-                <h6 className='text-light'>Facilities</h6>
+                <h6 className='typeone'>Facilities</h6>
                 <ul className='unorder-list'>
-                    <li>Facility Type</li>
-                    <li>Add Facility</li>
-                    <li>View Facility</li>
+                    <li><Link className='property-link'>Facility Type</Link></li>
+                    <li><Link className='property-link'>Add Facility</Link></li>
+                    <li><Link className='property-link'>View Facility</Link></li>
                 </ul>
              </div>
           </div>

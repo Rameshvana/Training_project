@@ -17,3 +17,25 @@ export function updatePropertyTypeData(data){
 export function deletePropertyTypeData(data){
   return deleteItem(propertyUrl,data)
 }
+
+
+
+
+/// Add Property Api Calls here only 
+const addPropertyUrl = 'http://localhost:8000/Add-property/'
+
+export function saveAddpropertyData(data){
+  return saveData(addPropertyUrl,data)
+}
+
+export function getAddPropertyData(){
+  return getData(addPropertyUrl)
+}
+
+export function deleteAddPropertyData(data){
+  return deleteItem(addPropertyUrl,data)
+}
+
+export function updateAddPropertyData(data){
+  return updateData(addPropertyUrl,data)
+}
